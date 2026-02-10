@@ -42,8 +42,8 @@
     }
 
     /* Colores iniciales (se ajustarán en la actividad) */
-    #btnAdd { background-color: #2e7d32; color: white; } /* verde */
-    #btnDel { background-color: #c62828; color: white; } /* rojo */
+    #btnAdd { background-color:red; color: white; } /* verde */
+    #btnDel { background-color: blue; color: white; } /* rojo */
     #btnEdit { background-color: #1565c0; color: white; } /* azul */
 
     ul {
@@ -83,7 +83,7 @@
 
   <div class="panel">
     <input id="taskInput" type="text" placeholder="Escribe una tarea (ej: 'Estudiar Git')" />
-    <button id="btnAdd" onclick="addTask()">Añadir tarea</button>
+    <button id="btnAdd" onclick="addTask() ">Añadir tarea</button>
     <button id="btnEdit" onclick="editSelected()">Editar tarea</button>
     <button id="btnDel" onclick="deleteSelected()">Eliminar tarea</button>
   </div>
