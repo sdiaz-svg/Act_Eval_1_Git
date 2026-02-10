@@ -185,6 +185,27 @@
 }
 
     // Rama "eliminar"
+    function deleteSelected() {
+        if (selectedId === null) {
+        setStatus("Selecciona una tarea antes de eliminar.", "danger");
+        return;
+    }
+
+  const before = tasks.length;
+  tasks = tasks.filter(t => t.id !== selectedId);
+
+  if (tasks.length === before) {
+    // Por si selectedId apunta a una tarea que ya no existe
+    setStatus("No se encontró la tarea seleccionada para eliminar.", "danger")
+    selectedId = null;
+    render();
+    return;
+  }
+
+  setStatus(`Tarea eliminada (ID ${selectedId}).`, "ok");
+  selectedId = null;
+  render();
+}
     
     // Rama "editar"
     function editSelected() {
